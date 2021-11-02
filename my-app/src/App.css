@@ -1,0 +1,54 @@
+.App {
+  margin: 0 auto;
+  background-color: #000000;
+  
+}
+
+h1{
+  font-family: "FuturaPTDemi";
+  font-size: 56px;
+  font-weight: 600;
+}
+h2{
+  font-family: "FuturaPTDemi";
+  font-size: 40px;
+  font-weight: 600;
+}
+h3{
+  font-family: "FuturaPTDemi";
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h4{
+  font-family: "FuturaPTBook";
+  font-size: 24px;
+  font-weight: 400;
+}
+p{
+  font-family: "FuturaPTBook";
+  font-size: 16px;
+  font-weight: 400;
+}
+a{
+  font-family: "FuturaPTBook";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+button{
+  height: 48px;
+  width: 222px;
+  font-family: "FuturaPTDemi";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  background-color: rgba(236,63,63, 0.15);
+  color: rgba(255,255,255, 1);
+  border: 1px solid rgba(163, 90, 90, 0.8);
+  transition: .2s ease-in;
+}
+
+
+
+

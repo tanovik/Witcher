@@ -1,0 +1,31 @@
+.gm-style-cc {
+    display: none !important;
+  }
+  
+  .gm-style a[href^="https://maps.google.com/maps"] {
+    display: none !important;
+  }
+.map_container{
+  width: 100%;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+}
+  .map_wrapper {
+    width: 1200px;
+    align-items: center;
+    margin-bottom: 96px;
+
+  }
+.map_wrapper h2{
+  margin-bottom:40px;
+}
+
+  .map{
+    filter: grayscale(100%);
+    max-height: 540px;
+    width: 100%;
+  }
+  .map_marker{
+    filter: none;
+  }
