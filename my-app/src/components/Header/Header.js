@@ -10,9 +10,13 @@ export default function Header(props) {
 
 
 
-const changeVisibility = () => {
+const changeVisibilityHidden = () => {
   setVisibility({visibility: 'hidden'})
 }
+const changeVisibilityVisible = () => {
+  setVisibility({visibility: 'visible'})
+}
+
 
   
 
@@ -22,14 +26,17 @@ const changeVisibility = () => {
           <div className='header_wrapper'>
             
         <div className = 'header_icon'>
-                <a href='/' className='header_icon_link'>
+        <NavLink to={"/home"} onClick={changeVisibilityVisible}>
           <img src={witcherLogo}  alt='Сериал Ведьмак' className='header_icon_pic'/>
-          </a>
+          </NavLink>
+
             </div>
-            <div  style={{ visibility: (history.location.pathname !== "/request" ? 'visible' : 'hidden') }}>
-            {/* <NavLink to={"/request"}> */}
-        <button onClick={changeVisibility}> Подключить подписку </button>
-      {/* </NavLink> */}
+
+
+            <div  style={{ visibility: (history.location.pathname === "/home" ? 'visible' : 'hidden') }}>
+            <NavLink to={"/request"}>
+        <button onClick={changeVisibilityHidden}> Подключить подписку </button>
+      </NavLink>
       </div>
       </div>
          

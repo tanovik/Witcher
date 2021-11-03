@@ -70,9 +70,7 @@ export default function Cast(props) {
     return (
         <div className='cast_wrapper'>
             <div className='cast_title_and_button_wrapper'>
-           
             <h2>Актерский состав</h2>
-            
             <div >
 
 <button className='slider_button'
@@ -96,14 +94,10 @@ disabled={prev}
 <ProgressBar completed={80} maxCompleted={100} bgColor={'#EC3F3F'} isLabelVisible={false}  height={'2px'} width={'1200px'}/>
 </div>
 
-
-
             <div >
 
       <div  ref={slider} className="slider">
-      
         {list.map((elem, i) => {
-
       return (
 
         <div key={elem.id}>
@@ -114,8 +108,6 @@ disabled={prev}
        
         ) })}
        
-      
-      
 
     </div>
     </div>

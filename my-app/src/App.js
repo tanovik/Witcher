@@ -1,5 +1,5 @@
 import Main from './components/Main/Main';
-// import Request from './components/Request/Request';
+import Request from './components/Request/Request';
 import NotFound from "./components/404/404";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -25,12 +25,12 @@ const MainApp = () => {
               <Main/>
             )}
           />
-          {/* <Route
+          <Route
             path="/request"
             render={() => (
               <Request/>
             )}
-          /> */}
+          />
               
           <Route path="*" render={() =>  <NotFound/>} />
         </Switch>

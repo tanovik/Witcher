@@ -7,6 +7,7 @@ export default function Banner(props) {
         <div className='banner'>
 
                  <div className='banner_text_group'>
+                 <div className='banner_text'>
             <div>
         <h1>Сериал Ведьмак</h1>
             </div>
@@ -17,6 +18,7 @@ export default function Banner(props) {
             </div>
             <div >
                 <button >Смотреть сериал</button>
+            </div>
             </div>
             
             </div>

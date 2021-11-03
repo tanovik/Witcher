@@ -30,7 +30,7 @@ export default function Map() {
 
       <div style={{ height: '100vh', width: '100%'}} className='map'>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyBEZ9qt_0ETlsFSgED9v7oeBrO0OIzEgdI" }}
+          bootstrapURLKeys={{ key: "" }}
           defaultCenter={cords.center}
           defaultZoom={cords.zoom}
           options={mapOptions}>
