@@ -1,46 +1,38 @@
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-import React, { useState } from "react";
-import witcherLogo from "../../images/image24.png";
-import { NavLink, useHistory } from "react-router-dom";
+import "../../App.css";
+import React from "react";
+import witcherLogo from "../../assets/images/image24.png";
 
-export default function Header(props) {
-  const history = useHistory();
-  const [visibility, setVisibility] = useState({ visibility: "visible" });
-
-  const changeVisibilityHidden = () => {
-    setVisibility({ visibility: "hidden" });
-  };
-  const changeVisibilityVisible = () => {
-    setVisibility({ visibility: "visible" });
-  };
-
+const Header = () => {
+  const location = useLocation();
   return (
     <header className="header">
       <div className="header_wrapper">
         <div className="header_icon">
-          <NavLink to={"/home"} onClick={changeVisibilityVisible}>
+          <Link to="/">
             <img
               src={witcherLogo}
               alt="Сериал Ведьмак"
               className="header_icon_pic"
             />
-          </NavLink>
+          </Link>
         </div>
 
         <div
           style={{
-            visibility:
-              history.location.pathname === "/home" ? "visible" : "hidden",
+            visibility: location.pathname !== "/request" ? "visible" : "hidden",
           }}
         >
-          <NavLink to={"/request"}>
-            <button onClick={changeVisibilityHidden}>
-              {" "}
-              Подключить подписку{" "}
+          <Link to="/request">
+            <button className="button_default_black">
+              Подключить подписку
             </button>
-          </NavLink>
+          </Link>
         </div>
       </div>
     </header>
   );
-}
+};
+
+export default Header;

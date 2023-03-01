@@ -1,31 +1,43 @@
-.gm-style-cc {
-  display: none !important;
+.map_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 96px;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
-.gm-style a[href^="https://maps.google.com/maps"]
-{
-  display: none !important;
-}
-.map_container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.map_wrapper {
-  width: 1200px;
-  align-items: center;
-  margin-bottom: 96px;
-}
 .map_wrapper h2 {
+  margin-left: 5px;
   margin-bottom: 40px;
 }
 
-.map {
-  filter: grayscale(100%);
-  max-height: 540px;
-  width: 100%;
+[class*="ymaps-2"][class*="-ground-pane"] {
+  filter: grayscale(100%) brightness(70%);
+  /* Firefox 3.5+ */
+  -webkit-filter: grayscale(100%) brightness(70%);
 }
-.map_marker {
-  filter: none;
+
+/* .ymaps-2-1-79-gotoymaps__container, */
+.ymaps-2-1-79-gototech {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .map_wrapper {
+    max-height: 460px;
+    margin-bottom: 20px;
+  }
+
+  .map_wrapper h2 {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .map_wrapper {
+    max-height: 400px;
+    max-width: 390px;
+    margin-bottom: 10px;
+  }
 }

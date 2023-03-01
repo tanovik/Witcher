@@ -7,19 +7,39 @@
 .footer_wrapper {
   max-width: 1200px;
   margin: auto;
-  padding-top: 42px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 30px 15px;
 }
 
 .footer_links_container {
-  min-width: 136px;
   display: flex;
   justify-content: space-between;
 }
 
-.footer_links_container img:hover {
+.footer_links_container img {
   cursor: pointer;
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_wrapper {
+      max-width: 640px;
+      padding: 12px;
+
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .footer_wrapper {
+      padding: 5px 0 0 5px;
+
+  }
+
+  .footer_links_container img {
+      margin: 5px 10px;
+  }
+
 }

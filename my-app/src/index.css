@@ -7,12 +7,13 @@ body {
   margin: 0;
   font-family: "FuturaPTDemi";
   font-style: normal;
-  color: rgba(255, 255, 255, 1);
+  color: white;
   line-height: 1.2;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 *,
 *::before,
@@ -24,27 +25,28 @@ body {
   font-family: "FuturaPTBold";
   font-style: normal;
   font-weight: 600;
-  src: local("FuturaPTBold"), url(./fonts/FuturaPT-Bold.woff) format("truetype");
+  src: local("FuturaPTBold"), url(./assets/fonts/FuturaPT-Bold.woff) format("truetype");
 }
+
 @font-face {
   font-family: "FuturaPTDemi";
   font-style: normal;
   font-weight: 600;
-  src: local("FuturaPTDemi"), url(./fonts/FuturaPT-Demi.woff) format("truetype");
+  src: local("FuturaPTDemi"), url(./assets/fonts/FuturaPT-Demi.woff) format("truetype");
 }
 
 @font-face {
   font-family: "FuturaPTMedium";
   font-style: normal;
   font-weight: 400;
-  src: local("FuturaPTMedium"),
-    url(./fonts/FuturaPT-Medium.woff) format("truetype");
+  src: local("FuturaPTMedium"), url(./assets/fonts/FuturaPT-Medium.woff) format("truetype");
 }
+
 @font-face {
   font-family: "FuturaPTBook";
   font-style: normal;
   font-weight: 400;
-  src: local("FuturaPTBook"), url(./fonts/FuturaPT-Book.woff) format("truetype");
+  src: local("FuturaPTBook"), url(./assets/fonts/FuturaPT-Book.woff) format("truetype");
 }
 
 html,
@@ -135,6 +137,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -149,36 +152,30 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 100px #2f2f2f inset !important;
-}
-
-input:-webkit-autofill {
-  -webkit-text-fill-color: white !important;
 }

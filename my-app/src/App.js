@@ -1,38 +1,25 @@
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Request from "./components/Request/Request";
-import NotFound from "./components/404/404";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import NotFound from "./components/NotFound/NotFound";
 
-import "./App.css";
-
-const MainApp = () => {
+function App() {
   return (
     <div className="App">
-      <div>
+      <BrowserRouter>
         <Header />
-        <Switch>
-          <Route path="/" exact>
-            <Redirect from="/" to="/home" />
-          </Route>
-
-          <Route path="/home" render={() => <Main />} />
-          <Route path="/request" render={() => <Request />} />
-
-          <Route path="*" render={() => <NotFound />} />
-        </Switch>
-      </div>
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+          <Route path="/request" element={<Request />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </div>
   );
-};
+}
 
-let App = () => {
-  return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <MainApp />
-    </BrowserRouter>
-  );
-};
 export default App;

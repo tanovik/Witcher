@@ -1,30 +1,27 @@
 import "./Banner.css";
-import witcherBanner from "../../images/Rectangle51.png";
+import "../../../App.css";
+import witcherBanner from "../../../assets/images/Banner.png";
 
-export default function Banner(props) {
+const Banner = () => {
   return (
-    <div className="banner">
-      <div className="banner_text_group">
-        <div className="banner_text">
+    <div className="banner_wrapper">
+      <div className="banner">
+        <img src={witcherBanner} alt="Сериал Ведьмак" />
+      </div>
+      <div className="banner_text_group_wrapper">
+        <div className="banner_text_group">
+          <h1>Сериал Ведьмак</h1>
+          <p>
+            Геральт из Ривии, наемный охотник за чудовищами, перенесший мутации,
+            идет навстречу своей судьбе в неспокойном мире, где люди часто
+            оказываются куда коварнее чудовищ.
+          </p>
           <div>
-            <h1>Сериал Ведьмак</h1>
-          </div>
-          <div>
-            <p>
-              Геральт из Ривии, наемный охотник за чудовищами, перенесший
-              мутации, идет навстречу своей судьбе в неспокойном мире, где люди
-              часто оказываются куда коварнее чудовищ.
-            </p>
-          </div>
-          <div>
-            <button>Смотреть сериал</button>
+            <button className="button_default_red">Смотреть сериал</button>
           </div>
         </div>
       </div>
-
-      <div className="img_wrapper">
-        <img src={witcherBanner} alt="Сериал Ведьмак" />
-      </div>
     </div>
   );
-}
+};
+export default Banner;

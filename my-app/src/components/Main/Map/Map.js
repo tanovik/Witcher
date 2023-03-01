@@ -1,49 +1,45 @@
-import "./Map.css";
 import React from "react";
-import GoogleMapReact from "google-map-react";
-import point from "../../images/Point.png";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+import "./Map.css";
+import point from "../../../assets/images/Point.png";
+const placemarkImage = {
+  iconLayout: "default#image",
+  iconImageHref: point,
+  iconImageSize: [50, 50],
+};
 
-const MarkerComponent = ({}) => (
-  <div className="map_marker">
-    <img src={point} />
-  </div>
-);
-
-export default function Map() {
-  const cords = {
-    center: {
-      lat: 55.75,
-      lng: 37.62,
-    },
+export default function App() {
+  const defaultState = {
+    center: [55.751574, 37.62566],
     zoom: 12,
-  };
-  const mapOptions = {
-    fullscreenControl: false,
-    disableDefaultUI: true,
+    controls: [],
   };
   return (
-    <div className="map_container">
-      <div className="map_wrapper">
-        <div>
-          <h2>Магазины мерча ведьмака</h2>
-        </div>
-
-        <div style={{ height: "100vh", width: "100%" }} className="map">
-          <GoogleMapReact
-            bootstrapURLKeys={{ key: "" }}
-            defaultCenter={cords.center}
-            defaultZoom={cords.zoom}
-            options={mapOptions}
+    <div className="map_wrapper">
+      <h2>Магазины мерча ведьмака</h2>
+      <div>
+        <YMaps>
+          <Map
+            defaultState={defaultState}
+            style={{ height: "540px", width: "100%" }}
           >
-            <MarkerComponent
-              lat={55.75022}
-              lng={37.62566}
+            <Placemark
               style={{ filter: "none" }}
+              geometry={[55.75022, 37.62566]}
+              options={placemarkImage}
             />
-            <MarkerComponent lat={55.78146} lng={37.52152} />
-            <MarkerComponent lat={55.75275} lng={37.55019} />
-          </GoogleMapReact>
-        </div>
+            <Placemark
+              style={{ filter: "none" }}
+              geometry={[55.75275, 37.55019]}
+              options={placemarkImage}
+            />
+            <Placemark
+              style={{ filter: "none" }}
+              geometry={[55.78146, 37.52152]}
+              options={placemarkImage}
+            />
+          </Map>
+        </YMaps>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import "./Request.css";
-import React from "react";
+import { Link } from "react-router-dom";
 
 export default function SentRequest() {
   return (
@@ -10,9 +10,9 @@ export default function SentRequest() {
         время, чтобы уточнить все детали заказа.
       </h4>
       <div>
-        <a href={"/home"}>
-          <button className="button"> Вернуться на главную </button>
-        </a>
+        <Link to={"/"}>
+          <button className="button_default_red"> Вернуться на главную </button>
+        </Link>
       </div>
     </div>
   );
