@@ -203,7 +203,9 @@
 
 }
 
-@media screen and (max-width: 300px) {
+
+
+@media screen and (max-width: 330px) {
 
   .swiper-button-prev {
     left: 83%;
@@ -212,5 +214,10 @@
   .swiper-button-next {
     left: 91%;
   }
+  
+  .swiper_title {
+    max-width: 180px;
+    top: 20px;
+}
 
 }
