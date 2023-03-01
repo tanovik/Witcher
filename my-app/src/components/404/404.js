@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <div className="notFound">
       <h1 className="notFound_title">404</h1>
-      <p className="notFound_text">Страница не найдена</p>
+      <p className="notFound_text">This page is not found</p>
       <button
         aria-label="Назад"
         className="notFound_goBack"
