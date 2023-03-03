@@ -2,7 +2,7 @@
 
 <br/>
 
-### Демо можно посмотреть [тут](https://tanovik.github.io/WitcherApp)
+### Демо можно посмотреть [тут](https://tanovik.github.io/witcher/)
 
 <br/>
 
